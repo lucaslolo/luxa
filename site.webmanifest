@@ -1,0 +1,14 @@
+{
+  "name": "LUXA FIT",
+  "short_name": "LUXA FIT",
+  "description": "Journal d'un athlète hybride : force, course et HYROX.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080908",
+  "theme_color": "#080908",
+  "lang": "fr",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" id="top">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,12 +9,36 @@
       content="Mes objectifs de force en développé couché, squat et soulevé de terre, avec mes charges actuelles et mes prochaines cibles."
     />
     <title>Mes objectifs de force — LUXA FIT</title>
+    <link rel="canonical" href="https://luxaweb.netlify.app/force" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="LUXA FIT" />
+    <meta property="og:title" content="Mes objectifs de force — LUXA FIT" />
+    <meta property="og:description" content="Mes objectifs de force en développé couché, squat et soulevé de terre, avec mes charges actuelles et mes prochaines cibles." />
+    <meta property="og:url" content="https://luxaweb.netlify.app/force" />
+    <meta property="og:image" content="https://luxaweb.netlify.app/assets/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="image" href="assets/luxa-logo.webp" fetchpriority="high" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" />
+    <script>
+      try {
+        if (sessionStorage.getItem("luxa-intro-seen")) document.documentElement.classList.add("intro-seen");
+      } catch (e) {}
+    </script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="loader" id="loader" aria-label="Chargement de LUXA FIT">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <div class="loader" id="loader" aria-hidden="true">
       <div class="loader-mark">
-        <img src="assets/luxa-logo.png" alt="Logo LUXA FIT" />
+        <img src="assets/luxa-logo.webp" alt="" width="656" height="380" fetchpriority="high" />
       </div>
       <p class="loader-caption">CONSTRUIS TA MEILLEURE VERSION</p>
       <div class="loader-track"><span></span></div>
@@ -22,8 +46,7 @@
     </div>
     <header class="header">
       <a class="brand" href="index.html" aria-label="LUXA FIT — Accueil"
-        ><img src="assets/luxa-logo.png" alt="LUXA FIT"
-      /></a>
+        ><img src="assets/luxa-logo-sm.webp" alt="LUXA FIT" width="320" height="185" /></a>
       <nav class="nav" aria-label="Navigation principale">
         <a href="index.html#parcours">Mon parcours</a
         ><a href="index.html#piliers">Ce qui m'a aidé</a
@@ -40,7 +63,7 @@
         ☰
       </button>
     </header>
-    <main>
+    <main id="contenu">
       <section class="detail-page-hero">
         <p class="eyebrow">
           <span class="dot"></span> FORCE · MES REPÈRES ACTUELS
@@ -404,9 +427,32 @@
       </section>
     </main>
     <footer class="footer">
-      <a class="brand" href="index.html"
-        ><img src="assets/luxa-logo.png" alt="LUXA FIT" /></a
-      ><span>CONSTRUIS TA MEILLEURE VERSION.</span><span>© LUXA FIT</span>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="LUXA FIT — Accueil"
+            ><img src="assets/luxa-logo-sm.webp" alt="LUXA FIT" width="320" height="185" loading="lazy" decoding="async"
+          /></a>
+          <p>Journal d'un athlète hybride : force, course, HYROX. Pas de raccourci, juste le process.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Plan du site">
+          <div>
+            <span class="footer-title">Mon parcours</span>
+            <a href="physique.html">Physique</a><a href="force.html">Force</a><a href="course.html">Course</a><a href="hyrox.html">HYROX</a>
+          </div>
+          <div>
+            <span class="footer-title">Ce qui m'a aidé</span>
+            <a href="nutrition.html">Nutrition</a><a href="training.html">Entraînement</a><a href="mentalite.html">Mentalité</a><a href="dashboard.html">Dashboard</a>
+          </div>
+          <div>
+            <span class="footer-title">Réseaux</span>
+            <a href="https://www.instagram.com/luxa_fit_/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.tiktok.com/@luxa_fit_" target="_blank" rel="noopener noreferrer">TikTok</a><a href="https://www.youtube.com/@luxa_fit" target="_blank" rel="noopener noreferrer">YouTube</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>CONSTRUIS TA MEILLEURE VERSION.</span><span>© <span data-year>2026</span> LUXA FIT</span>
+        <a class="back-to-top" href="#top">Haut de page <span aria-hidden="true">↑</span></a>
+      </div>
     </footer>
     <script src="js/performance.js"></script>
     <script src="js/main.js"></script>
