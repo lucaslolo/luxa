@@ -18,7 +18,10 @@ Ouvrir `index.html` dans un navigateur. Aucun serveur ou package n'est nécessai
 - `css/style.css` : identité visuelle sombre / lime et responsive
 - `js/main.js` : écran de chargement, menu mobile et sélecteurs de rang sur l'accueil
 - `js/performance.js` : stockage local des performances et mise à jour des rangs/progressions
-- `assets/luxa-logo.png` : logo transmis
+- `assets/luxa-logo.png` : logo transmis (source) ; `luxa-logo.webp` et `luxa-logo-sm.webp` sont les versions optimisées utilisées par le site
+- `assets/og-image.jpg`, `favicon-32.png`, `apple-touch-icon.png`, `icon-192.png` : image de partage et icônes
+- `404.html`, `robots.txt`, `sitemap.xml`, `site.webmanifest` : page d'erreur, référencement et installation mobile
+- `netlify.toml` : publication, en-têtes de sécurité et cache
 - `assets/founder-training.jpeg` : photo de sport transmise
 
 ## À ne pas confondre avec une version en production

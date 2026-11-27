@@ -1,18 +1,128 @@
 const loader = document.getElementById("loader");
-window.addEventListener("load", () => {
-  window.setTimeout(() => loader?.classList.add("done"), 1250);
-});
+const INTRO_KEY = "luxa-intro-seen";
+let loaderHidden = false;
+const hideLoader = () => {
+  if (loaderHidden || !loader) return;
+  loaderHidden = true;
+  loader.classList.add("done");
+  try {
+    sessionStorage.setItem(INTRO_KEY, "1");
+  } catch (error) {
+    /* stockage indisponible : l'intro sera rejouée */
+  }
+};
+if (document.documentElement.classList.contains("intro-seen")) {
+  loaderHidden = true;
+} else if (loader) {
+  // Intro jouée une seule fois par session, sans attendre plus que nécessaire.
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+  const introDelay = reducedMotion ? 150 : 900;
+  if (document.readyState === "complete") {
+    window.setTimeout(hideLoader, introDelay);
+  } else {
+    window.addEventListener("load", () =>
+      window.setTimeout(hideLoader, introDelay),
+    );
+  }
+  // Filet de sécurité si une ressource externe tarde à charger.
+  window.setTimeout(hideLoader, 2600);
+  loader.addEventListener("click", hideLoader);
+}
+
+const header = document.querySelector(".header");
 const menu = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
-menu?.addEventListener("click", () => {
-  const open = nav.classList.toggle("open");
+if (nav && !nav.id) nav.id = "navigation-principale";
+menu?.setAttribute("aria-controls", nav?.id || "");
+
+const setMenu = (open) => {
+  if (!nav || !menu) return;
+  nav.classList.toggle("open", open);
   menu.setAttribute("aria-expanded", String(open));
+  menu.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+  menu.textContent = open ? "✕" : "☰";
+};
+menu?.addEventListener("click", () => {
+  setMenu(!nav.classList.contains("open"));
 });
 nav?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    menu?.setAttribute("aria-expanded", "false");
+  link.addEventListener("click", () => setMenu(false));
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && nav?.classList.contains("open")) {
+    setMenu(false);
+    menu?.focus();
+  }
+});
+document.addEventListener("click", (event) => {
+  if (
+    nav?.classList.contains("open") &&
+    header &&
+    !header.contains(event.target)
+  )
+    setMenu(false);
+});
+
+// Page courante dans la navigation.
+const currentPage = (
+  window.location.pathname.split("/").pop() || "index.html"
+).replace(/\.html$/, "");
+nav?.querySelectorAll("a").forEach((link) => {
+  if (link.hasAttribute("aria-current")) return;
+  const href = link.getAttribute("href") || "";
+  if (href.startsWith("#") || href.includes("#")) return;
+  const page = href.split("/").pop().replace(/\.html$/, "") || "index";
+  if (page === (currentPage || "index")) link.setAttribute("aria-current", "page");
+});
+
+// Section active sur la page d'accueil.
+const sectionLinks = [...(nav?.querySelectorAll('a[href^="#"]') || [])];
+if (sectionLinks.length && "IntersectionObserver" in window) {
+  const linkFor = new Map();
+  sectionLinks.forEach((link) => {
+    const section = document.querySelector(link.getAttribute("href"));
+    if (section) linkFor.set(section, link);
   });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const link = linkFor.get(entry.target);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          sectionLinks.forEach((other) => other.removeAttribute("aria-current"));
+          link.setAttribute("aria-current", "location");
+        } else if (link.getAttribute("aria-current") === "location") {
+          link.removeAttribute("aria-current");
+        }
+      });
+    },
+    { rootMargin: "-45% 0px -50% 0px" },
+  );
+  linkFor.forEach((_, section) => observer.observe(section));
+}
+
+// Ombre de l'en-tête au défilement.
+if (header) {
+  const onScroll = () =>
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+}
+
+// Lien d'évitement : place le focus dans le contenu.
+document.querySelector(".skip-link")?.addEventListener("click", (event) => {
+  const target = document.querySelector(
+    event.currentTarget.getAttribute("href"),
+  );
+  if (!target) return;
+  target.setAttribute("tabindex", "-1");
+  target.focus({ preventScroll: false });
+});
+
+document.querySelectorAll("[data-year]").forEach((element) => {
+  element.textContent = String(new Date().getFullYear());
 });
 
 const parseRankTime = (value) => {
