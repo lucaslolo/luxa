@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080908" />
+    <meta
+      name="description"
+      content="Mon objectif HYROX et l'espace dédié à mon programme pour progresser jusqu'au rang Chad."
+    />
+    <title>Mon objectif HYROX — LUXA FIT</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-label="Chargement de LUXA FIT">
+      <div class="loader-mark">
+        <img src="assets/luxa-logo.png" alt="Logo LUXA FIT" />
+      </div>
+      <p class="loader-caption">CONSTRUIS TA MEILLEURE VERSION</p>
+      <div class="loader-track"><span></span></div>
+      <span class="loader-status">HYROX · OBJECTIF CHAD</span>
+    </div>
+    <header class="header">
+      <a class="brand" href="index.html" aria-label="LUXA FIT — Accueil"
+        ><img src="assets/luxa-logo.png" alt="LUXA FIT"
+      /></a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="index.html#parcours">Mon parcours</a
+        ><a href="index.html#piliers">Ce qui m'a aidé</a
+        ><a href="training.html">Mes objectifs</a
+        ><a href="dashboard.html">Dashboard</a>
+      </nav>
+      <a class="header-cta" href="index.html#youtube"
+        >Suivre l'aventure <span>↗</span></a
+      ><button
+        class="menu-toggle"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+    </header>
+    <main>
+      <section class="detail-page-hero">
+        <p class="eyebrow">
+          <span class="dot"></span> HYROX · MON OBJECTIF
+        </p>
+        <h1>COURIR.<br /><em>ENCHAÎNER. PROGRESSER.</em></h1>
+        <p>
+          Course à pied, stations et transitions : je prépare mon prochain
+          objectif HYROX avec un cap clair, progresser jusqu'au rang Chad.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#programme"
+            >Mon programme <span>↓</span></a
+          ><a class="text-link" href="training.html"
+            >Retour aux objectifs <span>↗</span></a
+          >
+        </div>
+      </section>
+      <section class="text-panel program-section" id="programme">
+        <p class="eyebrow">01 — MON PROGRAMME HYROX</p>
+        <h2>Un entraînement<br /><em>complet et hybride.</em></h2>
+        <p class="detail-body">
+          Ce bloc de huit semaines combine course, squat lourd, stations HYROX
+          et enchaînements sous fatigue. Il est organisé autour de quatre
+          séances par semaine, avec une semaine allégée.
+        </p>
+        <div class="sbd-generator-grid hyrox-generator-grid">
+          <div class="sbd-record-source">
+            <div class="sbd-record-grid hyrox-record-grid">
+              <article class="sbd-record-card">
+                <span>1RM squat · Dashboard</span>
+                <strong
+                  ><span
+                    data-hyrox-squat-max
+                    data-performance-display="squat"
+                    >170</span
+                  ><small>kg</small></strong
+                >
+              </article>
+              <article class="sbd-record-card">
+                <span>Chrono 10 km · Dashboard</span>
+                <strong
+                  ><span data-hyrox-ten-km data-performance-display="tenKm"
+                    >50:00</span
+                  ><small>min</small></strong
+                >
+              </article>
+            </div>
+            <a class="text-link sbd-dashboard-link" href="dashboard.html"
+              >Modifier mes repères dans le Dashboard <span>↗</span></a
+            >
+          </div>
+          <div class="dashboard-form hyrox-program-guide">
+            <p class="eyebrow">LES 4 PILIERS DU BLOC</p>
+            <ul>
+              <li><strong>Force</strong> — squat lourd et travail de jambes.</li>
+              <li><strong>Course</strong> — intervalles et sortie facile.</li>
+              <li><strong>Stations</strong> — pratique des mouvements HYROX.</li>
+              <li><strong>Fatigue</strong> — courir après les stations.</li>
+            </ul>
+          </div>
+        </div>
+        <p
+          class="dashboard-status"
+          data-hyrox-status
+          role="status"
+          aria-live="polite"
+        ></p>
+        <div
+          class="sbd-program-results hyrox-program-results"
+          id="hyrox-program-results"
+          aria-live="polite"
+        ></div>
+        <p class="small-note sbd-program-note">
+          Les charges de squat sont calculées depuis ton 1RM du Dashboard et
+          arrondies aux 2,5 kg. Les allures de course prennent ton chrono 10 km
+          comme repère. Garde environ 2 répétitions en réserve sur les séries
+          lourdes, espace les séances difficiles et réduis le volume si ta
+          récupération baisse. Ce bloc n'est pas un test maximal chaque semaine.
+        </p>
+      </section>
+      <section class="detail-cta">
+        <div>
+          <p class="eyebrow">SUIVRE LE PARCOURS</p>
+          <h2>La préparation commence<br /><em>un entraînement à la fois.</em></h2>
+        </div>
+        <a class="btn btn-primary" href="index.html#hyrox"
+          >Voir mon objectif HYROX <span>↗</span></a
+        >
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="brand" href="index.html"
+        ><img src="assets/luxa-logo.png" alt="LUXA FIT" /></a
+      ><span>CONSTRUIS TA MEILLEURE VERSION.</span><span>© LUXA FIT</span>
+    </footer>
+    <script src="js/performance.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/hyrox-program.js"></script>
+    <script src="js/mobile-carousels.js"></script>
+  </body>
+</html>

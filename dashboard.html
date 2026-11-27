@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080908" />
+    <meta
+      name="description"
+      content="Mets à jour tes performances LUXA FIT et suis tes rangs et progressions."
+    />
+    <title>Dashboard performances — LUXA FIT</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-label="Chargement de LUXA FIT">
+      <div class="loader-mark">
+        <img src="assets/luxa-logo.png" alt="Logo LUXA FIT" />
+      </div>
+      <p class="loader-caption">CONSTRUIS TA MEILLEURE VERSION</p>
+      <div class="loader-track"><span></span></div>
+      <span class="loader-status">MES PERFORMANCES · MA PROGRESSION</span>
+    </div>
+    <header class="header">
+      <a class="brand" href="index.html" aria-label="LUXA FIT — Accueil"
+        ><img src="assets/luxa-logo.png" alt="LUXA FIT"
+      /></a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="index.html#parcours">Mon parcours</a>
+        <a href="index.html#piliers">Ce qui m'a aidé</a>
+        <a href="index.html#hyrox">HYROX</a>
+        <a href="dashboard.html" aria-current="page">Dashboard</a>
+      </nav>
+      <a class="header-cta" href="index.html#youtube"
+        >Suivre l'aventure <span>↗</span></a
+      >
+      <button
+        class="menu-toggle"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+    </header>
+    <main>
+      <section class="detail-page-hero dashboard-hero">
+        <p class="eyebrow"><span class="dot"></span> MES DONNÉES · MON SUIVI</p>
+        <h1>LE TRAVAIL<br /><em>EN CHIFFRES.</em></h1>
+        <p>
+          Mets à jour tes performances pour actualiser automatiquement tes rangs
+          et tes barres de progression sur le site.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#saisie"
+            >Mettre à jour mes valeurs <span>↓</span></a
+          >
+          <a class="text-link" href="index.html#parcours"
+            >Retour à mon parcours <span>↗</span></a
+          >
+        </div>
+      </section>
+
+      <section class="dashboard-section" id="saisie">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 — SAISIE</p>
+            <h2>Mes performances<br /><em>actuelles.</em></h2>
+          </div>
+          <p class="section-intro">
+            Enregistre ici tes meilleurs repères. Les chronos se saisissent en
+            minutes:secondes; le HYROX en heures:minutes:secondes.
+          </p>
+        </div>
+        <div class="dashboard-grid">
+          <form class="dashboard-form" data-performance-form>
+            <fieldset class="performance-fieldset">
+              <legend>Force <span>CHARGE EN KG</span></legend>
+              <div class="performance-input-grid">
+                <label class="performance-field"
+                  >Développé couché
+                  <span class="performance-input-wrap"
+                    ><input
+                      name="bench"
+                      type="number"
+                      min="0.5"
+                      max="1000"
+                      step="0.5"
+                      value="135"
+                      required
+                      inputmode="decimal"
+                    /><span>kg</span></span
+                  >
+                </label>
+                <label class="performance-field"
+                  >Squat
+                  <span class="performance-input-wrap"
+                    ><input
+                      name="squat"
+                      type="number"
+                      min="0.5"
+                      max="1000"
+                      step="0.5"
+                      value="170"
+                      required
+                      inputmode="decimal"
+                    /><span>kg</span></span
+                  >
+                </label>
+                <label class="performance-field"
+                  >Soulevé de terre
+                  <span class="performance-input-wrap"
+                    ><input
+                      name="deadlift"
+                      type="number"
+                      min="0.5"
+                      max="1000"
+                      step="0.5"
+                      value="215"
+                      required
+                      inputmode="decimal"
+                    /><span>kg</span></span
+                  >
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="performance-fieldset">
+              <legend>Course à pied <span>FORMAT MM:SS</span></legend>
+              <div class="performance-input-grid">
+                <label class="performance-field"
+                  >5 km
+                  <span class="performance-input-wrap"
+                    ><input
+                      name="fiveKm"
+                      type="text"
+                      value="21:02"
+                      required
+                      inputmode="numeric"
+                      pattern="[0-9]{1,4}:[0-5][0-9]"
+                      aria-describedby="running-format"
+                    /><span>min:s</span></span
+                  >
+                </label>
+                <label class="performance-field"
+                  >10 km
+                  <span class="performance-input-wrap"
+                    ><input
+                      name="tenKm"
+                      type="text"
+                      value="50:00"
+                      required
+                      inputmode="numeric"
+                      pattern="[0-9]{1,4}:[0-5][0-9]"
+                      aria-describedby="running-format"
+                    /><span>min:s</span></span
+                  >
+                </label>
+              </div>
+              <p class="field-hint" id="running-format">Exemple : 21:02</p>
+            </fieldset>
+            <fieldset class="performance-fieldset">
+              <legend>HYROX <span>FORMAT H:MM:SS</span></legend>
+              <label class="performance-field"
+                >Meilleur chrono
+                <span class="performance-input-wrap"
+                  ><input
+                    name="hyrox"
+                    type="text"
+                    value="1:32:00"
+                    required
+                    inputmode="numeric"
+                    pattern="[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]"
+                    aria-describedby="hyrox-format"
+                  /><span>h:min:s</span></span
+                >
+              </label>
+              <p class="field-hint" id="hyrox-format">Exemple : 1:32:00</p>
+            </fieldset>
+            <div class="dashboard-form-footer">
+              <p>
+                Les données restent dans le stockage local de ce navigateur et
+                ne se synchronisent pas entre appareils.
+              </p>
+              <button class="btn btn-primary" type="submit">
+                Enregistrer mes performances <span>↗</span>
+              </button>
+            </div>
+            <p
+              class="dashboard-status"
+              data-performance-status
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
+
+          <div
+            class="dashboard-preview"
+            aria-label="Aperçu de mes rangs et progressions"
+            data-mobile-carousel="dashboard-progress"
+          >
+            <article class="dashboard-summary">
+              <div class="dashboard-summary-heading">
+                <div>
+                  <p class="eyebrow">FORCE</p>
+                  <h3>Mes barres</h3>
+                </div>
+                <span
+                  class="rank-logo"
+                  data-performance-rank-badge="strength"
+                  role="img"
+                  aria-label="Rang en force"
+                  ><span class="rank-logo-mark" aria-hidden="true">★</span
+                  ><span
+                    class="rank-logo-name"
+                    data-performance-rank-name="strength"
+                    >Champion</span
+                  ></span
+                >
+              </div>
+              <div class="progress-list">
+                <div
+                  class="progress-item"
+                  data-performance-progress="strength"
+                  data-performance-metric="bench"
+                  data-performance-label="Développé couché"
+                  data-target-value="140"
+                >
+                  <div class="progress-heading">
+                    <span>Développé couché</span
+                    ><strong
+                      ><span data-performance-current>135 kg</span> / 140
+                      kg</strong
+                    >
+                  </div>
+                  <div
+                    class="progress-track"
+                    role="progressbar"
+                    aria-label="Développé couché vers 140 kg"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="96"
+                  >
+                    <span style="--progress: 96%"></span>
+                  </div>
+                  <div class="progress-meta">
+                    <span>Objectif Chad · 140 kg</span
+                    ><b data-performance-percent>96%</b>
+                  </div>
+                </div>
+                <div
+                  class="progress-item"
+                  data-performance-progress="strength"
+                  data-performance-metric="squat"
+                  data-performance-label="Squat"
+                  data-target-value="180"
+                >
+                  <div class="progress-heading">
+                    <span>Squat</span
+                    ><strong
+                      ><span data-performance-current>170 kg</span> / 180
+                      kg</strong
+                    >
+                  </div>
+                  <div
+                    class="progress-track"
+                    role="progressbar"
+                    aria-label="Squat vers 180 kg"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="94"
+                  >
+                    <span style="--progress: 94%"></span>
+                  </div>
+                  <div class="progress-meta">
+                    <span>Objectif Chad · 180 kg</span
+                    ><b data-performance-percent>94%</b>
+                  </div>
+                </div>
+                <div
+                  class="progress-item"
+                  data-performance-progress="strength"
+                  data-performance-metric="deadlift"
+                  data-performance-label="Soulevé de terre"
+                  data-target-value="220"
+                >
+                  <div class="progress-heading">
+                    <span>Soulevé de terre</span
+                    ><strong
+                      ><span data-performance-current>215 kg</span> / 220
+                      kg</strong
+                    >
+                  </div>
+                  <div
+                    class="progress-track"
+                    role="progressbar"
+                    aria-label="Soulevé de terre vers 220 kg"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="98"
+                  >
+                    <span style="--progress: 98%"></span>
+                  </div>
+                  <div class="progress-meta">
+                    <span>Objectif Chad · 220 kg</span
+                    ><b data-performance-percent>98%</b>
+                  </div>
+                </div>
+              </div>
+              <p class="dashboard-rank-line">
+                Rang actuel :
+                <strong data-performance-preview-rank="strength"
+                  >Champion</strong
+                >
+              </p>
+            </article>
+
+            <article class="dashboard-summary">
+              <div class="dashboard-summary-heading">
+                <div>
+                  <p class="eyebrow">COURSE À PIED</p>
+                  <h3>Mes chronos</h3>
+                </div>
+                <span
+                  class="rank-logo"
+                  data-performance-rank-badge="running"
+                  role="img"
+                  aria-label="Rang en course"
+                  ><span class="rank-logo-mark" aria-hidden="true">★</span
+                  ><span
+                    class="rank-logo-name"
+                    data-performance-rank-name="running"
+                    >Or</span
+                  ></span
+                >
+              </div>
+              <div class="progress-list">
+                <div
+                  class="progress-item"
+                  data-performance-progress="running"
+                  data-performance-metric="fiveKm"
+                  data-performance-label="5 kilomètres"
+                  data-target-time="18:00"
+                  data-target-label="moins de 18:00"
+                >
+                  <div class="progress-heading">
+                    <span>5 km</span
+                    ><strong
+                      ><span data-performance-current>21:02</span></strong
+                    >
+                  </div>
+                  <div
+                    class="progress-track"
+                    role="progressbar"
+                    aria-label="5 kilomètres vers moins de 18 minutes"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="86"
+                  >
+                    <span style="--progress: 86%"></span>
+                  </div>
+                  <div class="progress-meta">
+                    <span>Objectif Chad · sous 18:00</span
+                    ><b data-performance-percent>86%</b>
+                  </div>
+                </div>
+                <div
+                  class="progress-item"
+                  data-performance-progress="running"
+                  data-performance-metric="tenKm"
+                  data-performance-label="10 kilomètres"
+                  data-target-time="36:00"
+                  data-target-label="moins de 36:00"
+                >
+                  <div class="progress-heading">
+                    <span>10 km</span
+                    ><strong
+                      ><span data-performance-current>50:00</span></strong
+                    >
+                  </div>
+                  <div
+                    class="progress-track"
+                    role="progressbar"
+                    aria-label="10 kilomètres vers moins de 36 minutes"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="72"
+                  >
+                    <span style="--progress: 72%"></span>
+                  </div>
+                  <div class="progress-meta">
+                    <span>Objectif Chad · sous 36:00</span
+                    ><b data-performance-percent>72%</b>
+                  </div>
+                </div>
+              </div>
+              <p class="dashboard-rank-line">
+                Rang actuel :
+                <strong data-performance-preview-rank="running">Or</strong>
+              </p>
+            </article>
+
+            <article class="dashboard-summary">
+              <div class="dashboard-summary-heading">
+                <div>
+                  <p class="eyebrow">HYROX</p>
+                  <h3>Road to 1H</h3>
+                </div>
+                <span
+                  class="rank-logo"
+                  data-performance-rank-badge="hyrox"
+                  role="img"
+                  aria-label="Rang HYROX"
+                  ><span class="rank-logo-mark" aria-hidden="true">★</span
+                  ><span
+                    class="rank-logo-name"
+                    data-performance-rank-name="hyrox"
+                    >Or</span
+                  ></span
+                >
+              </div>
+              <div class="progress-list">
+                <div
+                  class="progress-item"
+                  data-performance-progress="hyrox"
+                  data-performance-metric="hyrox"
+                  data-performance-label="Chrono HYROX"
+                  data-start-time="2:00:00"
+                  data-target-time="1:00:00"
+                  data-target-label="1H00"
+                >
+                  <div class="progress-heading">
+                    <span>Chrono actuel</span
+                    ><strong
+                      ><span data-performance-current>1H32</span> / 1H00</strong
+                    >
+                  </div>
+                  <div
+                    class="progress-track"
+                    role="progressbar"
+                    aria-label="Progression HYROX de 2 heures vers 1 heure"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="47"
+                  >
+                    <span style="--progress: 47%"></span>
+                  </div>
+                  <div class="progress-meta">
+                    <span>Départ 2H · objectif 1H</span
+                    ><b data-performance-percent>47%</b>
+                  </div>
+                </div>
+              </div>
+              <p class="dashboard-rank-line">
+                Rang actuel :
+                <strong data-performance-preview-rank="hyrox">Or</strong>
+              </p>
+            </article>
+          </div>
+        </div>
+        <p class="dashboard-local-note">
+          Cette version fonctionne sans compte ni base de données : les
+          changements sont visibles sur les pages du site depuis le même
+          navigateur et le même appareil. Une synchronisation en ligne pourra
+          être ajoutée plus tard avec une API et une base de données.
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="brand" href="index.html"
+        ><img src="assets/luxa-logo.png" alt="LUXA FIT" /></a
+      ><span>CONSTRUIS TA MEILLEURE VERSION.</span><span>© LUXA FIT</span>
+    </footer>
+    <script src="js/performance.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mobile-carousels.js"></script>
+  </body>
+</html>

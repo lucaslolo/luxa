@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080908" />
+    <meta
+      name="description"
+      content="Mes chronos actuels et mes objectifs sur 5 km et 10 km, avec des repères de progression."
+    />
+    <title>Mes chronos sur 5 km et 10 km — LUXA FIT</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-label="Chargement de LUXA FIT">
+      <div class="loader-mark">
+        <img src="assets/luxa-logo.png" alt="Logo LUXA FIT" />
+      </div>
+      <p class="loader-caption">CONSTRUIS TA MEILLEURE VERSION</p>
+      <div class="loader-track"><span></span></div>
+      <span class="loader-status">MON PARCOURS, MES OBJECTIFS</span>
+    </div>
+    <header class="header">
+      <a class="brand" href="index.html" aria-label="LUXA FIT — Accueil"
+        ><img src="assets/luxa-logo.png" alt="LUXA FIT"
+      /></a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="index.html#parcours">Mon parcours</a
+        ><a href="index.html#piliers">Ce qui m'a aidé</a
+        ><a href="index.html#hyrox">HYROX</a
+        ><a href="dashboard.html">Dashboard</a>
+      </nav>
+      <a class="header-cta" href="index.html#youtube"
+        >Suivre l'aventure <span>↗</span></a
+      ><button
+        class="menu-toggle"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+    </header>
+    <main>
+      <section class="detail-page-hero">
+        <p class="eyebrow">
+          <span class="dot"></span> COURSE À PIED · MES CHRONOS
+        </p>
+        <h1>
+          <span data-performance-display="fiveKm">21:02</span> SUR 5 KM<br /><em
+            ><span data-performance-display="tenKm">50:00</span> SUR 10 KM.</em
+          >
+        </h1>
+        <p>
+          Je détestais courir. Aujourd'hui, mes repères sont
+          <span data-performance-display="fiveKm">21:02</span> sur 5 km et
+          <span data-performance-display="tenKm">50:00</span> sur 10 km. Je
+          continue à travailler pour passer sous les 20 et 40 minutes.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#progression"
+            >Voir mes progressions <span>↓</span></a
+          ><a class="text-link" href="index.html"
+            >Retour à mon parcours <span>↗</span></a
+          >
+        </div>
+      </section>
+      <section class="detail-columns" id="progression">
+        <div>
+          <p class="eyebrow">01 — MES REPÈRES</p>
+          <h2>Progresser sur<br /><em>chaque distance.</em></h2>
+        </div>
+        <div class="detail-body">
+          <p>
+            Voici mes chronos actuels face aux objectifs que je me suis fixés.
+          </p>
+          <div class="progress-list">
+            <div
+              class="progress-item"
+              data-performance-progress="running"
+              data-performance-metric="fiveKm"
+              data-performance-label="5 kilomètres"
+              data-target-time="20:00"
+              data-target-label="moins de 20 min"
+            >
+              <div class="progress-heading">
+                <span>5 km · chrono actuel</span
+                ><strong><span data-performance-current>21:02</span></strong>
+              </div>
+              <div
+                class="progress-track"
+                role="progressbar"
+                aria-label="5 kilomètres vers moins de 20 minutes"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="95"
+              >
+                <span style="--progress: 95%"></span>
+              </div>
+              <div class="progress-meta">
+                <span>Objectif : moins de 20 min</span
+                ><b data-performance-percent>95%</b>
+              </div>
+            </div>
+            <div
+              class="progress-item"
+              data-performance-progress="running"
+              data-performance-metric="tenKm"
+              data-performance-label="10 kilomètres"
+              data-target-time="40:00"
+              data-target-label="moins de 40 min"
+            >
+              <div class="progress-heading">
+                <span>10 km · chrono actuel</span
+                ><strong><span data-performance-current>50:00</span></strong>
+              </div>
+              <div
+                class="progress-track"
+                role="progressbar"
+                aria-label="10 kilomètres vers moins de 40 minutes"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="80"
+              >
+                <span style="--progress: 80%"></span>
+              </div>
+              <div class="progress-meta">
+                <span>Objectif : moins de 40 min</span
+                ><b data-performance-percent>80%</b>
+              </div>
+            </div>
+          </div>
+          <p class="small-note">
+            Indice chrono : temps cible divisé par chrono actuel. Il ne
+            représente pas un plan d'entraînement accompli.
+          </p>
+        </div>
+      </section>
+      <section
+        class="text-panel rank-panel"
+        aria-labelledby="course-ranks-title"
+      >
+        <p class="eyebrow">02 — MES RANGS</p>
+        <h2>La course a<br /><em>ses paliers.</em></h2>
+        <p class="rank-explanation">
+          Échelle personnelle, sans valeur de classement officiel. Pour valider
+          un rang, il faut atteindre les seuils sur 5 km et 10 km; le rang
+          global suit la distance la moins avancée.
+        </p>
+        <ul
+          class="rank-ladder"
+          data-performance-ranks="running"
+          aria-label="Rangs de course à pied"
+        >
+          <li class="rank-row" data-rank-key="bronze">
+            <div class="rank-title">
+              <span class="rank-dot rank-bronze" aria-hidden="true"></span
+              ><strong>Bronze</strong>
+            </div>
+            <p class="rank-threshold">5 km ≤ 30:00 · 10 km ≤ 60:00</p>
+          </li>
+          <li class="rank-row" data-rank-key="argent">
+            <div class="rank-title">
+              <span class="rank-dot rank-argent" aria-hidden="true"></span
+              ><strong>Argent</strong>
+            </div>
+            <p class="rank-threshold">5 km ≤ 27:00 · 10 km ≤ 54:00</p>
+          </li>
+          <li class="rank-row" data-rank-key="or">
+            <div class="rank-title">
+              <span class="rank-dot rank-or" aria-hidden="true"></span
+              ><strong>Or</strong>
+            </div>
+            <p class="rank-threshold">5 km ≤ 23:00 · 10 km ≤ 50:00</p>
+          </li>
+          <li class="rank-row" data-rank-key="elite">
+            <div class="rank-title">
+              <span class="rank-dot rank-elite" aria-hidden="true"></span
+              ><strong>Elite</strong>
+            </div>
+            <p class="rank-threshold">5 km ≤ 21:30 · 10 km ≤ 43:00</p>
+          </li>
+          <li class="rank-row" data-rank-key="champion">
+            <div class="rank-title">
+              <span class="rank-dot rank-champion" aria-hidden="true"></span
+              ><strong>Champion</strong>
+            </div>
+            <p class="rank-threshold">5 km ≤ 19:00 · 10 km ≤ 38:00</p>
+          </li>
+          <li class="rank-row" data-rank-key="chad">
+            <div class="rank-title">
+              <span class="rank-dot rank-chad" aria-hidden="true"></span
+              ><strong>Chad</strong>
+            </div>
+            <p class="rank-threshold">5 km &lt; 18:00 · 10 km &lt; 36:00</p>
+          </li>
+        </ul>
+      </section>
+      <section class="text-panel">
+        <p class="eyebrow">03 — COMMENT J'AI CONSTRUIT MON ENDURANCE</p>
+        <h2>Courir avec<br /><em>une intention.</em></h2>
+        <div class="lesson-grid">
+          <article class="lesson-card">
+            <b>01 / ENDURANCE</b>
+            <p>
+              Développer une base aérobie avec des sorties adaptées, sans
+              transformer chaque footing en compétition.
+            </p>
+          </article>
+          <article class="lesson-card">
+            <b>02 / QUALITÉ</b>
+            <p>
+              Ajouter des séances plus ciblées pour travailler l'allure, le
+              seuil et la capacité à maintenir un effort.
+            </p>
+          </article>
+          <article class="lesson-card">
+            <b>03 / RÉCUPÉRATION</b>
+            <p>
+              Respecter les jours faciles et ajuster la charge quand la fatigue
+              s'accumule, surtout avec la musculation.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="detail-columns">
+        <div>
+          <p class="eyebrow">04 — MES REPÈRES</p>
+          <h2>Les séances<br /><em>qui comptent.</em></h2>
+        </div>
+        <div class="detail-body">
+          <p>
+            Une progression en course repose sur plusieurs types d'efforts : des
+            sorties faciles, du travail à allure contrôlée et des séances plus
+            spécifiques. Le but est de construire un ensemble cohérent, pas de
+            courir vite tous les jours.
+          </p>
+          <div class="detail-tags">
+            <span>FOOTING</span><span>SEUIL</span><span>INTERVALLES</span
+            ><span>10 KM</span><span>5 KM</span>
+          </div>
+          <p class="small-note">
+            Les allures exactes seront ajoutées à partir de mes séances et de
+            mes données réelles.
+          </p>
+        </div>
+      </section>
+      <section class="text-panel">
+        <p class="eyebrow">05 — DE LA COURSE AU HYROX</p>
+        <h2>Une endurance utile<br /><em>pour l'hybride.</em></h2>
+        <p class="detail-body">
+          La course est devenue une base importante de ma préparation HYROX. Je
+          cherche à conserver une bonne allure tout en étant capable d'enchaîner
+          les stations et de gérer la fatigue.
+        </p>
+        <div class="media-note">
+          Page volontairement sans photos. Les futurs contenus pourront être
+          intégrés sous forme de vidéos, séances détaillées ou journal de
+          course.
+        </div>
+      </section>
+      <section class="text-panel program-section" id="programme">
+        <p class="eyebrow">06 — MON PROGRAMME COURSE À PIED</p>
+        <h2>Un plan pour<br /><em>passer un cap.</em></h2>
+        <p class="detail-body">
+          Choisis ton objectif 5 km ou 10 km. Le programme de huit semaines
+          s'appuie sur les chronos enregistrés dans le Dashboard et propose
+          trois sorties par semaine.
+        </p>
+        <div class="sbd-generator-grid running-generator-grid">
+          <div class="sbd-record-source">
+            <div class="sbd-record-grid running-record-grid">
+              <article class="sbd-record-card">
+                <span>Record 5 km</span>
+                <strong
+                  ><span
+                    data-running-time="fiveKm"
+                    data-performance-display="fiveKm"
+                    >21:02</span
+                  ><small>min</small></strong
+                >
+              </article>
+              <article class="sbd-record-card">
+                <span>Record 10 km</span>
+                <strong
+                  ><span
+                    data-running-time="tenKm"
+                    data-performance-display="tenKm"
+                    >50:00</span
+                  ><small>min</small></strong
+                >
+              </article>
+            </div>
+            <a class="text-link sbd-dashboard-link" href="dashboard.html"
+              >Modifier mes chronos dans le Dashboard <span>↗</span></a
+            >
+          </div>
+          <div class="dashboard-form sbd-program-form">
+            <fieldset class="performance-fieldset">
+              <legend>Objectif <span>CHOISIS TA DISTANCE</span></legend>
+              <label class="performance-field" for="running-distance">
+                Distance cible
+                <select
+                  class="sbd-level-select"
+                  id="running-distance"
+                  name="distance"
+                  data-running-distance
+                >
+                  <option value="5">5 km</option>
+                  <option value="10">10 km</option>
+                </select>
+              </label>
+            </fieldset>
+            <div class="dashboard-form-footer">
+              <p>
+                Le plan ajuste les allures à tes chronos et prévoit une semaine
+                allégée.
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-generate-running
+              >
+                Générer mon plan <span>↗</span>
+              </button>
+            </div>
+            <p
+              class="dashboard-status"
+              data-running-status
+              role="status"
+              aria-live="polite"
+            ></p>
+          </div>
+        </div>
+        <div
+          class="sbd-program-results running-program-results"
+          id="running-program-results"
+          aria-live="polite"
+          hidden
+        ></div>
+        <p class="small-note sbd-program-note">
+          Les allures restent des repères : cours les séances faciles à une
+          intensité où tu peux parler, adapte le volume à ta récupération et
+          arrête-toi en cas de douleur.
+        </p>
+      </section>
+      <section class="detail-cta">
+        <div>
+          <p class="eyebrow">LA SUITE DU PARCOURS</p>
+          <h2>Le prochain objectif<br /><em>se construit maintenant.</em></h2>
+        </div>
+        <a class="btn btn-primary" href="training.html"
+          >Voir mes objectifs d'entraînement <span>↗</span></a
+        >
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="brand" href="index.html"
+        ><img src="assets/luxa-logo.png" alt="LUXA FIT" /></a
+      ><span>CONSTRUIS TA MEILLEURE VERSION.</span><span>© LUXA FIT</span>
+    </footer>
+    <script src="js/performance.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/running-program.js"></script>
+    <script src="js/mobile-carousels.js"></script>
+  </body>
+</html>

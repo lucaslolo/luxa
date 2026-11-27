@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080908" />
+    <meta
+      name="description"
+      content="LUXA FIT — Mon parcours pour construire un physique, développer ma force et mon endurance."
+    />
+    <title>LUXA FIT — Mon parcours, mes objectifs</title>
+    <link rel="preload" as="image" href="assets/luxa-logo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-label="Chargement de LUXA FIT">
+      <div class="loader-mark">
+        <img src="assets/luxa-logo.png" alt="Logo LUXA FIT" />
+      </div>
+      <p class="loader-caption">CONSTRUIS TA MEILLEURE VERSION</p>
+      <div class="loader-track"><span></span></div>
+      <span class="loader-status">MON PARCOURS, MES OBJECTIFS</span>
+    </div>
+
+    <header class="header">
+      <a class="brand" href="#accueil" aria-label="LUXA FIT — Accueil"
+        ><img src="assets/luxa-logo.png" alt="LUXA FIT"
+      /></a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#parcours">Mon parcours</a
+        ><a href="#piliers">Ce qui m'a aidé</a
+        ><a href="#hyrox">Prochain objectif</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+      <a class="header-cta" href="#youtube">Mes réseaux <span>↘</span></a>
+      <button
+        class="menu-toggle"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+    </header>
+
+    <main id="accueil">
+      <section class="hero hero-home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+          <p class="eyebrow">
+            <span class="dot"></span> LUXA FIT / JOURNAL D'UN ATHLÈTE
+          </p>
+          <h1>JE N'AI PAS<br />FINI DE<br /><em>PROGRESSER.</em></h1>
+          <p class="hero-copy">
+            J'ai construit ma force et appris à aimer courir. Aujourd'hui, je
+            rassemble ces expériences autour d'un nouveau défi : devenir un
+            athlète hybride.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#parcours"
+              >DÉCOUVRIR LES ÉTAPES <span>↘</span></a
+            >
+            <a class="text-link" href="#hyrox">ROAD TO HYROX <span>↗</span></a>
+          </div>
+          <div class="hero-note">
+            <span class="line"></span> PAS DE RACCOURCI. JUSTE LE PROCESS.
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Repères de mon parcours sportif">
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+          <div class="visual-core">
+            <span>LXF</span><small>ATHLETE<br />IN PROGRESS</small>
+          </div>
+          <div class="visual-stamp stamp-strength">
+            <small>STRENGTH</small
+            ><strong data-performance-display="bench">135</strong
+            ><em>KG · BENCH</em>
+          </div>
+          <div class="visual-stamp stamp-running">
+            <small>RUNNING</small
+            ><strong data-performance-display="fiveKm">21:02</strong
+            ><em>5 KM · CHRONO</em>
+          </div>
+          <div class="visual-stamp stamp-hybrid">
+            <small data-performance-rank-label="hyrox">HYROX · RANG OR</small
+            ><strong data-performance-display="hyroxShort">1H32</strong
+            ><em>ROAD TO 1H</em>
+          </div>
+          <div class="visual-bottom">DISCIPLINE / REPEAT / EVOLVE</div>
+        </div>
+        <div class="hero-index">01 — LE PARCOURS CONTINUE</div>
+      </section>
+      <section class="journey section" id="parcours">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 — LE CHEMIN PARCOURU</p>
+            <h2>Chaque résultat<br /><em>a une histoire.</em></h2>
+          </div>
+          <p class="section-intro">
+            Les chiffres donnent le résultat. Dans chaque parcours, je raconte
+            le point de départ, les étapes et ce que j'ai appris pour y arriver.
+          </p>
+        </div>
+        <div
+          class="journey-grid"
+          data-mobile-carousel="journey-cards"
+          aria-label="Parcours sportifs"
+        >
+          <article
+            class="journey-card"
+            data-rank-system="hyrox"
+            data-current-rank-order="2"
+            data-current-seconds="5520"
+            data-start-seconds="7200"
+          >
+            <div class="journey-card-top">
+              <span class="card-number">HYROX / OBJECTIF EN COURS</span
+              ><span
+                class="rank-logo rank-or"
+                data-performance-rank-badge="hyrox"
+                role="img"
+                aria-label="Rang actuel : Or"
+                ><span class="rank-logo-mark" aria-hidden="true">★</span
+                ><span class="rank-logo-name" data-performance-rank-name="hyrox"
+                  >Or</span
+                ></span
+              >
+            </div>
+            <h3>Road to 1H</h3>
+            <label class="rank-target-control"
+              ><span>Progression vers</span
+              ><select data-rank-select aria-label="Rang HYROX cible">
+                <option value="bronze" data-rank-order="0">Bronze</option>
+                <option value="argent" data-rank-order="1">Argent</option>
+                <option
+                  value="or"
+                  data-rank-order="2"
+                  data-target-time="1:45:00"
+                >
+                  Or
+                </option>
+                <option
+                  value="elite"
+                  data-rank-order="3"
+                  data-target-time="1:20:00"
+                  selected
+                >
+                  Elite
+                </option>
+                <option
+                  value="champion"
+                  data-rank-order="4"
+                  data-target-time="1:10:00"
+                >
+                  Champion
+                </option>
+                <option
+                  value="chad"
+                  data-rank-order="5"
+                  data-target-time="1:00:00"
+                >
+                  Chad
+                </option>
+              </select></label
+            >
+            <div class="progress-list">
+              <div class="progress-item">
+                <div class="progress-heading">
+                  <span data-rank-heading>Progression vers Elite</span
+                  ><strong data-performance-current="hyrox">1H32</strong>
+                </div>
+                <div
+                  class="progress-track"
+                  data-rank-progress
+                  role="progressbar"
+                  aria-label="Progression HYROX vers le rang Elite"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="70"
+                  aria-valuetext="Chrono actuel : 1 heure 32. Progression vers Elite : 70 pour cent."
+                >
+                  <span data-rank-fill style="--progress: 70%"></span>
+                </div>
+                <div class="progress-meta">
+                  <span data-rank-target-label
+                    >Départ : 2H · Cible Elite : 1H20</span
+                  ><b data-rank-percent>70%</b>
+                </div>
+              </div>
+            </div>
+            <p class="progress-note">
+              Calculée entre le départ de 2H et le chrono du rang visé.
+            </p>
+            <a href="training.html" class="text-link"
+              >Découvrir ma préparation <span>↗</span></a
+            >
+          </article>
+          <article class="journey-card" data-rank-system="strength">
+            <div class="journey-card-top">
+              <span class="card-number">FORCE / OBJECTIFS EN COURS</span
+              ><span
+                class="rank-logo rank-champion"
+                data-performance-rank-badge="strength"
+                role="img"
+                aria-label="Rang actuel : Champion"
+                ><span class="rank-logo-mark" aria-hidden="true">★</span
+                ><span
+                  class="rank-logo-name"
+                  data-performance-rank-name="strength"
+                  >Champion</span
+                ></span
+              >
+            </div>
+            <h3>Mes barres</h3>
+            <label class="rank-target-control"
+              ><span>Progression vers</span
+              ><select data-rank-select aria-label="Rang cible en force">
+                <option
+                  value="bronze"
+                  data-bench="70"
+                  data-squat="90"
+                  data-deadlift="110"
+                >
+                  Bronze
+                </option>
+                <option
+                  value="argent"
+                  data-bench="90"
+                  data-squat="115"
+                  data-deadlift="145"
+                >
+                  Argent
+                </option>
+                <option
+                  value="or"
+                  data-bench="105"
+                  data-squat="135"
+                  data-deadlift="165"
+                >
+                  Or
+                </option>
+                <option
+                  value="elite"
+                  data-bench="120"
+                  data-squat="150"
+                  data-deadlift="185"
+                >
+                  Elite
+                </option>
+                <option
+                  value="champion"
+                  data-bench="130"
+                  data-squat="160"
+                  data-deadlift="200"
+                >
+                  Champion
+                </option>
+                <option
+                  value="chad"
+                  data-bench="140"
+                  data-squat="180"
+                  data-deadlift="220"
+                  selected
+                >
+                  Chad
+                </option>
+              </select></label
+            >
+            <div class="progress-list">
+              <div
+                class="progress-item"
+                data-rank-metric="bench"
+                data-current-value="135"
+              >
+                <div class="progress-heading">
+                  <span>Développé couché</span
+                  ><strong
+                    ><span data-performance-current>135</span> /
+                    <span data-rank-target-value>140</span> kg</strong
+                  >
+                </div>
+                <div
+                  class="progress-track"
+                  data-rank-progress
+                  role="progressbar"
+                  aria-label="Développé couché : 135 sur 140 kg, rang Chad"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="96"
+                  aria-valuetext="135 kg sur 140 kg, 96 pour cent vers Chad"
+                >
+                  <span data-rank-fill style="--progress: 96%"></span>
+                </div>
+                <div class="progress-meta">
+                  <span data-rank-target-label>Rang Chad · 140 kg</span
+                  ><b data-rank-percent>96%</b>
+                </div>
+              </div>
+              <div
+                class="progress-item"
+                data-rank-metric="squat"
+                data-current-value="170"
+              >
+                <div class="progress-heading">
+                  <span>Squat</span
+                  ><strong
+                    ><span data-performance-current>170</span> /
+                    <span data-rank-target-value>180</span> kg</strong
+                  >
+                </div>
+                <div
+                  class="progress-track"
+                  data-rank-progress
+                  role="progressbar"
+                  aria-label="Squat : 170 sur 180 kg, rang Chad"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="94"
+                  aria-valuetext="170 kg sur 180 kg, 94 pour cent vers Chad"
+                >
+                  <span data-rank-fill style="--progress: 94%"></span>
+                </div>
+                <div class="progress-meta">
+                  <span data-rank-target-label>Rang Chad · 180 kg</span
+                  ><b data-rank-percent>94%</b>
+                </div>
+              </div>
+              <div
+                class="progress-item"
+                data-rank-metric="deadlift"
+                data-current-value="215"
+              >
+                <div class="progress-heading">
+                  <span>Soulevé de terre</span
+                  ><strong
+                    ><span data-performance-current>215</span> /
+                    <span data-rank-target-value>220</span> kg</strong
+                  >
+                </div>
+                <div
+                  class="progress-track"
+                  data-rank-progress
+                  role="progressbar"
+                  aria-label="Soulevé de terre : 215 sur 220 kg, rang Chad"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="98"
+                  aria-valuetext="215 kg sur 220 kg, 98 pour cent vers Chad"
+                >
+                  <span data-rank-fill style="--progress: 98%"></span>
+                </div>
+                <div class="progress-meta">
+                  <span data-rank-target-label>Rang Chad · 220 kg</span
+                  ><b data-rank-percent>98%</b>
+                </div>
+              </div>
+            </div>
+            <p class="progress-note">
+              Indice : charge actuelle ÷ seuil du rang choisi, plafonné à 100%.
+            </p>
+            <a href="force.html" class="text-link"
+              >Découvrir les étapes <span>↗</span></a
+            >
+          </article>
+          <article class="journey-card" data-rank-system="running">
+            <div class="journey-card-top">
+              <span class="card-number">COURSE / CHRONOS CIBLES</span
+              ><span
+                class="rank-logo rank-or"
+                data-performance-rank-badge="running"
+                role="img"
+                aria-label="Rang actuel : Or"
+                ><span class="rank-logo-mark" aria-hidden="true">★</span
+                ><span
+                  class="rank-logo-name"
+                  data-performance-rank-name="running"
+                  >Or</span
+                ></span
+              >
+            </div>
+            <h3>Mes chronos</h3>
+            <label class="rank-target-control"
+              ><span>Progression vers</span
+              ><select
+                data-rank-select
+                aria-label="Rang cible en course à pied"
+              >
+                <option value="bronze" data-five-km="30:00" data-ten-km="60:00">
+                  Bronze
+                </option>
+                <option value="argent" data-five-km="27:00" data-ten-km="54:00">
+                  Argent
+                </option>
+                <option value="or" data-five-km="23:00" data-ten-km="50:00">
+                  Or
+                </option>
+                <option
+                  value="elite"
+                  data-five-km="21:30"
+                  data-ten-km="43:00"
+                  selected
+                >
+                  Elite
+                </option>
+                <option
+                  value="champion"
+                  data-five-km="19:00"
+                  data-ten-km="38:00"
+                >
+                  Champion
+                </option>
+                <option
+                  value="chad"
+                  data-five-km="17:59"
+                  data-ten-km="35:59"
+                  data-five-km-label="Sous 18:00"
+                  data-ten-km-label="Sous 36:00"
+                >
+                  Chad
+                </option>
+              </select></label
+            >
+            <div class="progress-list">
+              <div
+                class="progress-item"
+                data-rank-metric="fiveKm"
+                data-current-time="21:02"
+              >
+                <div class="progress-heading">
+                  <span>5 km</span
+                  ><strong
+                    ><span data-performance-current>21:02</span> /
+                    <span data-rank-target-value>21:30</span></strong
+                  >
+                </div>
+                <div
+                  class="progress-track"
+                  data-rank-progress
+                  role="progressbar"
+                  aria-label="5 kilomètres vers le rang Elite"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="100"
+                  aria-valuetext="21 minutes 2 secondes, progression vers le rang Elite"
+                >
+                  <span data-rank-fill style="--progress: 100%"></span>
+                </div>
+                <div class="progress-meta">
+                  <span data-rank-target-label>Rang Elite · 21:30</span
+                  ><b data-rank-percent>100%</b>
+                </div>
+              </div>
+              <div
+                class="progress-item"
+                data-rank-metric="tenKm"
+                data-current-time="50:00"
+              >
+                <div class="progress-heading">
+                  <span>10 km</span
+                  ><strong
+                    ><span data-performance-current>50:00</span> /
+                    <span data-rank-target-value>43:00</span></strong
+                  >
+                </div>
+                <div
+                  class="progress-track"
+                  data-rank-progress
+                  role="progressbar"
+                  aria-label="10 kilomètres vers le rang Elite"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="86"
+                  aria-valuetext="50 minutes, progression vers le rang Elite"
+                >
+                  <span data-rank-fill style="--progress: 86%"></span>
+                </div>
+                <div class="progress-meta">
+                  <span data-rank-target-label>Rang Elite · 43:00</span
+                  ><b data-rank-percent>86%</b>
+                </div>
+              </div>
+            </div>
+            <p class="progress-note">
+              Indice chrono : cible ÷ chrono actuel, plafonné à 100%.
+            </p>
+            <a href="course.html" class="text-link"
+              >Découvrir les étapes <span>↗</span></a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section class="pillars section" id="piliers">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">02 — CE QUI M'A AIDÉ</p>
+            <h2>Ce qui m'a aidé<br /><em>à progresser.</em></h2>
+          </div>
+        </div>
+        <div
+          class="pillar-grid"
+          data-mobile-carousel="pillars"
+          aria-label="Les piliers pour progresser"
+        >
+          <a class="pillar-card nutrition" href="nutrition.html"
+            ><span class="card-number">01 / ALIMENTATION</span>
+            <div class="card-art art-nutrition" aria-hidden="true">
+              <img class="card-logo" src="assets/nutrition-mark.svg" alt="" />
+            </div>
+            <div class="card-bottom">
+              <div>
+                <h3>Nutrition</h3>
+                <p>Prise de masse · Sèche · Organisation</p>
+              </div>
+              <span class="circle-arrow">↗</span>
+            </div></a
+          >
+          <a class="pillar-card training" href="training.html"
+            ><span class="card-number">02 / ENTRAÎNEMENT</span>
+            <div class="card-art art-training" aria-hidden="true">
+              <img class="card-logo" src="assets/training-mark.svg" alt="" />
+            </div>
+            <div class="card-bottom">
+              <div>
+                <h3>Entraînement</h3>
+                <p>Musculation · Force · Course · HYROX</p>
+              </div>
+              <span class="circle-arrow">↗</span>
+            </div></a
+          >
+          <a class="pillar-card mindset" href="mentalite.html"
+            ><span class="card-number">03 / MENTALITÉ</span>
+            <div class="card-art art-mindset" aria-hidden="true">
+              <img class="card-logo" src="assets/mindset-mark.svg" alt="" />
+            </div>
+            <div class="card-bottom">
+              <div>
+                <h3>Mentalité</h3>
+                <p>Discipline · Habitudes · Mode de vie</p>
+              </div>
+              <span class="circle-arrow">↗</span>
+            </div></a
+          >
+        </div>
+      </section>
+
+      <section class="hyrox next-chapter section" id="hyrox">
+        <div class="next-chapter-copy">
+          <div class="hyrox-top">
+            <p class="eyebrow">03 — LE PROCHAIN CHAPITRE</p>
+            <span class="live-tag"><i></i> OBJECTIF EN COURS</span>
+          </div>
+          <h2>Un nouveau défi.<br /><em>SUB 1H.</em></h2>
+          <p class="hyrox-desc">
+            Après la force et la course, je me lance un nouveau défi : passer
+            sous l'heure en HYROX Solo Open. Je partage la préparation, les
+            séances et les progrès, étape par étape.
+          </p>
+          <a class="btn btn-primary" href="training.html"
+            >Découvrir ma préparation <span>↗</span></a
+          >
+        </div>
+        <div
+          class="hyrox-scoreboard"
+          aria-label="Départ et objectif HYROX Solo Open"
+        >
+          <span class="scoreboard-label">HYROX SOLO OPEN</span>
+          <div class="scoreboard-times">
+            <div><small>DÉPART</small><strong>2H</strong></div>
+            <span aria-hidden="true">→</span>
+            <div class="scoreboard-target">
+              <small>OBJECTIF</small><strong>1H</strong>
+            </div>
+          </div>
+          <div class="scoreboard-footer">
+            <span>ROAD TO</span
+            ><span>DISCIPLINE · RÉGULARITÉ · PROGRESSION</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="socials section" id="youtube">
+        <div class="socials-heading">
+          <div>
+            <p class="eyebrow">SUIVRE L'AVENTURE</p>
+            <h2>Retrouve LUXA FIT<br /><em>sur les réseaux.</em></h2>
+          </div>
+          <p class="section-intro">
+            Les entraînements, les coulisses et mes progrès : retrouve LUXA FIT
+            sur Instagram, TikTok et YouTube.
+          </p>
+        </div>
+        <div
+          class="social-links"
+          data-mobile-carousel="social-links"
+          aria-label="Réseaux sociaux LUXA FIT"
+        >
+          <a
+            class="social-card social-instagram"
+            href="https://www.instagram.com/luxa_fit_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ouvrir Instagram LUXA FIT dans un nouvel onglet"
+            ><span class="social-icon"
+              ><img src="assets/instagram-mark.svg" alt="" /></span
+            ><span class="social-copy"
+              ><span class="social-name">INSTAGRAM</span
+              ><strong>@luxa_fit_</strong
+              ><span class="social-action">Suivre le compte</span></span
+            ><span class="social-arrow" aria-hidden="true">↗</span></a
+          >
+          <a
+            class="social-card social-tiktok"
+            href="https://www.tiktok.com/@luxa_fit_"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ouvrir TikTok LUXA FIT dans un nouvel onglet"
+            ><span class="social-icon"
+              ><img src="assets/tiktok-mark.svg" alt="" /></span
+            ><span class="social-copy"
+              ><span class="social-name">TIKTOK</span><strong>@luxa_fit_</strong
+              ><span class="social-action">Voir les vidéos</span></span
+            ><span class="social-arrow" aria-hidden="true">↗</span></a
+          >
+          <a
+            class="social-card social-youtube"
+            href="https://www.youtube.com/@luxa_fit"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ouvrir YouTube LUXA FIT dans un nouvel onglet"
+            ><span class="social-icon"
+              ><img src="assets/youtube-mark.svg" alt="" /></span
+            ><span class="social-copy"
+              ><span class="social-name">YOUTUBE</span><strong>@luxa_fit</strong
+              ><span class="social-action">Découvrir la chaîne</span></span
+            ><span class="social-arrow" aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="brand" href="#accueil"
+        ><img src="assets/luxa-logo.png" alt="LUXA FIT" /></a
+      ><span>CONSTRUIS TA MEILLEURE VERSION.</span><span>© LUXA FIT</span>
+    </footer>
+    <script src="js/performance.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mobile-carousels.js"></script>
+  </body>
+</html>

@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080908" />
+    <meta
+      name="description"
+      content="Mes objectifs de force en développé couché, squat et soulevé de terre, avec mes charges actuelles et mes prochaines cibles."
+    />
+    <title>Mes objectifs de force — LUXA FIT</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-label="Chargement de LUXA FIT">
+      <div class="loader-mark">
+        <img src="assets/luxa-logo.png" alt="Logo LUXA FIT" />
+      </div>
+      <p class="loader-caption">CONSTRUIS TA MEILLEURE VERSION</p>
+      <div class="loader-track"><span></span></div>
+      <span class="loader-status">MON PARCOURS, MES OBJECTIFS</span>
+    </div>
+    <header class="header">
+      <a class="brand" href="index.html" aria-label="LUXA FIT — Accueil"
+        ><img src="assets/luxa-logo.png" alt="LUXA FIT"
+      /></a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="index.html#parcours">Mon parcours</a
+        ><a href="index.html#piliers">Ce qui m'a aidé</a
+        ><a href="index.html#hyrox">HYROX</a
+        ><a href="dashboard.html">Dashboard</a>
+      </nav>
+      <a class="header-cta" href="index.html#youtube"
+        >Suivre l'aventure <span>↗</span></a
+      ><button
+        class="menu-toggle"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+    </header>
+    <main>
+      <section class="detail-page-hero">
+        <p class="eyebrow">
+          <span class="dot"></span> FORCE · MES REPÈRES ACTUELS
+        </p>
+        <h1>MES OBJECTIFS<br /><em>DE FORCE.</em></h1>
+        <p>
+          Développé couché, squat et soulevé de terre : voici mes charges
+          actuelles et les prochains caps que je vise.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#progression"
+            >Voir mes progressions <span>↓</span></a
+          ><a class="text-link" href="#programme"
+            >Générer un bloc SBD <span>↘</span></a
+          ><a class="text-link" href="index.html"
+            >Retour à mon parcours <span>↗</span></a
+          >
+        </div>
+      </section>
+      <section class="detail-columns" id="progression">
+        <div>
+          <p class="eyebrow">01 — MES CHARGES</p>
+          <h2>La force se<br /><em>construit.</em></h2>
+        </div>
+        <div class="detail-body">
+          <p>
+            Je suis aujourd'hui à
+            <span data-performance-display="bench">135</span> kg au développé
+            couché, <span data-performance-display="squat">170</span> kg au
+            squat et <span data-performance-display="deadlift">215</span> kg au
+            soulevé de terre. Mes prochaines cibles : 140, 180 et 220 kg.
+          </p>
+          <div class="progress-list">
+            <div
+              class="progress-item"
+              data-performance-progress="strength"
+              data-performance-metric="bench"
+              data-performance-label="Développé couché"
+              data-target-value="140"
+            >
+              <div class="progress-heading">
+                <span>Développé couché</span
+                ><strong
+                  ><span data-performance-current>135 kg</span> / 140 kg</strong
+                >
+              </div>
+              <div
+                class="progress-track"
+                role="progressbar"
+                aria-label="Développé couché vers 140 kg"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="96"
+              >
+                <span style="--progress: 96%"></span>
+              </div>
+              <div class="progress-meta">
+                <span>Objectif : 140 kg</span
+                ><b data-performance-percent>96%</b>
+              </div>
+            </div>
+            <div
+              class="progress-item"
+              data-performance-progress="strength"
+              data-performance-metric="squat"
+              data-performance-label="Squat"
+              data-target-value="180"
+            >
+              <div class="progress-heading">
+                <span>Squat</span
+                ><strong
+                  ><span data-performance-current>170 kg</span> / 180 kg</strong
+                >
+              </div>
+              <div
+                class="progress-track"
+                role="progressbar"
+                aria-label="Squat vers 180 kg"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="94"
+              >
+                <span style="--progress: 94%"></span>
+              </div>
+              <div class="progress-meta">
+                <span>Objectif : 180 kg</span
+                ><b data-performance-percent>94%</b>
+              </div>
+            </div>
+            <div
+              class="progress-item"
+              data-performance-progress="strength"
+              data-performance-metric="deadlift"
+              data-performance-label="Soulevé de terre"
+              data-target-value="220"
+            >
+              <div class="progress-heading">
+                <span>Soulevé de terre</span
+                ><strong
+                  ><span data-performance-current>215 kg</span> / 220 kg</strong
+                >
+              </div>
+              <div
+                class="progress-track"
+                role="progressbar"
+                aria-label="Soulevé de terre vers 220 kg"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="98"
+              >
+                <span style="--progress: 98%"></span>
+              </div>
+              <div class="progress-meta">
+                <span>Objectif : 220 kg</span
+                ><b data-performance-percent>98%</b>
+              </div>
+            </div>
+          </div>
+          <p class="small-note">
+            Les pourcentages indiquent la charge actuelle par rapport à la
+            cible.
+          </p>
+        </div>
+      </section>
+      <section
+        class="text-panel rank-panel"
+        aria-labelledby="force-ranks-title"
+      >
+        <p class="eyebrow">02 — MES RANGS</p>
+        <h2 id="force-ranks-title">La force a<br /><em>ses paliers.</em></h2>
+        <p class="rank-explanation">
+          Échelle personnelle, sans valeur de classement officiel. Pour valider
+          un rang, il faut atteindre les trois seuils de la ligne; le rang
+          global suit le mouvement le moins avancé.
+        </p>
+        <ul
+          class="rank-ladder"
+          data-performance-ranks="strength"
+          aria-label="Rangs de force"
+        >
+          <li class="rank-row" data-rank-key="bronze">
+            <div class="rank-title">
+              <span class="rank-dot rank-bronze" aria-hidden="true"></span
+              ><strong>Bronze</strong>
+            </div>
+            <p class="rank-threshold">
+              Développé couché 70 kg · Squat 90 kg · Soulevé de terre 110 kg
+            </p>
+          </li>
+          <li class="rank-row" data-rank-key="argent">
+            <div class="rank-title">
+              <span class="rank-dot rank-argent" aria-hidden="true"></span
+              ><strong>Argent</strong>
+            </div>
+            <p class="rank-threshold">
+              Développé couché 90 kg · Squat 115 kg · Soulevé de terre 145 kg
+            </p>
+          </li>
+          <li class="rank-row" data-rank-key="or">
+            <div class="rank-title">
+              <span class="rank-dot rank-or" aria-hidden="true"></span
+              ><strong>Or</strong>
+            </div>
+            <p class="rank-threshold">
+              Développé couché 105 kg · Squat 135 kg · Soulevé de terre 165 kg
+            </p>
+          </li>
+          <li class="rank-row" data-rank-key="elite">
+            <div class="rank-title">
+              <span class="rank-dot rank-elite" aria-hidden="true"></span
+              ><strong>Elite</strong>
+            </div>
+            <p class="rank-threshold">
+              Développé couché 120 kg · Squat 150 kg · Soulevé de terre 185 kg
+            </p>
+          </li>
+          <li class="rank-row" data-rank-key="champion">
+            <div class="rank-title">
+              <span class="rank-dot rank-champion" aria-hidden="true"></span
+              ><strong>Champion</strong>
+            </div>
+            <p class="rank-threshold">
+              Développé couché 130 kg · Squat 160 kg · Soulevé de terre 200 kg
+            </p>
+          </li>
+          <li class="rank-row" data-rank-key="chad">
+            <div class="rank-title">
+              <span class="rank-dot rank-chad" aria-hidden="true"></span
+              ><strong>Chad</strong>
+            </div>
+            <p class="rank-threshold">
+              Développé couché 140 kg · Squat 180 kg · Soulevé de terre 220 kg
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="text-panel">
+        <p class="eyebrow">03 — CE QUE J'APPLIQUE</p>
+        <h2>Les bases de ma<br /><em>progression.</em></h2>
+        <div class="lesson-grid">
+          <article class="lesson-card">
+            <b>01 / RÉGULARITÉ</b>
+            <p>
+              Répéter le travail dans la durée et garder une structure
+              d'entraînement cohérente.
+            </p>
+          </article>
+          <article class="lesson-card">
+            <b>02 / PROGRESSION</b>
+            <p>
+              Faire évoluer les charges et le volume avec contrôle, sans
+              chercher à battre un record à chaque séance.
+            </p>
+          </article>
+          <article class="lesson-card">
+            <b>03 / TECHNIQUE</b>
+            <p>
+              Soigner le placement, l'amplitude et la qualité des répétitions
+              avant de vouloir ajouter du poids.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="detail-columns">
+        <div>
+          <p class="eyebrow">04 — LES LEÇONS</p>
+          <h2>Ce que j'aurais<br /><em>voulu savoir.</em></h2>
+        </div>
+        <div class="detail-body">
+          <p>
+            La progression n'est pas toujours linéaire. Il faut apprendre à
+            gérer la fatigue, accepter les séances moins bonnes et ne pas
+            confondre une performance ponctuelle avec une progression durable.
+          </p>
+          <div class="detail-tags">
+            <span>VOLUME</span><span>INTENSITÉ</span><span>RÉCUPÉRATION</span
+            ><span>TECHNIQUE</span>
+          </div>
+        </div>
+      </section>
+      <section class="text-panel">
+        <p class="eyebrow">05 — CONTENU À VENIR</p>
+        <h2>Les séances<br /><em>en vrai.</em></h2>
+        <p class="detail-body">
+          Je n'ai pas besoin de photos pour présenter cette page. Je pourrai
+          ajouter plus tard des vidéos de séance, des explications ou un journal
+          de progression, sans que le site dépende d'une galerie.
+        </p>
+        <div class="media-note">
+          Zone prévue pour une vidéo ou un journal d'entraînement — aucun média
+          fictif affiché.
+        </div>
+      </section>
+      <section
+        class="text-panel sbd-generator"
+        id="programme"
+        aria-labelledby="sbd-generator-title"
+      >
+        <p class="eyebrow">06 — GÉNÉRATEUR DE PROGRAMME</p>
+        <h2 id="sbd-generator-title">
+          Ton bloc SBD.<br /><em>Sur 4 semaines.</em>
+        </h2>
+        <p class="detail-body">
+          Les 1RM ci-dessous proviennent du Dashboard. Choisis ton niveau pour
+          calculer les charges du squat, du développé couché et du soulevé de
+          terre.
+        </p>
+        <div class="sbd-generator-grid">
+          <div class="sbd-record-source">
+            <div
+              class="sbd-record-grid"
+              aria-label="1RM utilisés par le générateur"
+            >
+              <article class="sbd-record-card">
+                <span>Squat</span>
+                <strong
+                  ><span data-sbd-max="squat" data-performance-display="squat"
+                    >170</span
+                  ><small>kg</small></strong
+                >
+              </article>
+              <article class="sbd-record-card">
+                <span>Développé couché</span>
+                <strong
+                  ><span data-sbd-max="bench" data-performance-display="bench"
+                    >135</span
+                  ><small>kg</small></strong
+                >
+              </article>
+              <article class="sbd-record-card">
+                <span>Soulevé de terre</span>
+                <strong
+                  ><span
+                    data-sbd-max="deadlift"
+                    data-performance-display="deadlift"
+                    >215</span
+                  ><small>kg</small></strong
+                >
+              </article>
+            </div>
+            <a class="text-link sbd-dashboard-link" href="dashboard.html"
+              >Modifier mes records dans le Dashboard <span>↗</span></a
+            >
+          </div>
+          <div class="dashboard-form sbd-program-form">
+            <fieldset class="performance-fieldset">
+              <legend>Niveau <span>FORMAT DU BLOC</span></legend>
+              <label class="performance-field" for="sbd-level">
+                Niveau d'entraînement
+                <select
+                  class="sbd-level-select"
+                  id="sbd-level"
+                  name="level"
+                  required
+                >
+                  <option value="beginner">Débutant · 3 séances / semaine</option>
+                  <option value="expert">Expert · 4 séances / semaine</option>
+                </select>
+              </label>
+            </fieldset>
+            <div class="dashboard-form-footer">
+              <p>
+                Les records peuvent uniquement être modifiés dans le Dashboard.
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-generate-sbd
+              >
+                Générer mon bloc SBD <span>↗</span>
+              </button>
+            </div>
+            <p
+              class="dashboard-status"
+              data-sbd-status
+              role="status"
+              aria-live="polite"
+            ></p>
+          </div>
+        </div>
+        <div
+          class="sbd-program-results"
+          id="sbd-program-results"
+          aria-live="polite"
+          hidden
+        ></div>
+        <p class="small-note sbd-program-note">
+          Les charges sont calculées en pourcentage des 1RM du Dashboard et
+          arrondies aux 2,5 kg les plus proches. Ce bloc est une base générale :
+          adapte-le à ton expérience, à ta récupération et à ton matériel.
+        </p>
+      </section>
+      <section class="detail-cta">
+        <div>
+          <p class="eyebrow">LA SUITE DU PARCOURS</p>
+          <h2>Le prochain objectif<br /><em>se construit maintenant.</em></h2>
+        </div>
+        <a class="btn btn-primary" href="training.html"
+          >Voir mes objectifs d'entraînement <span>↗</span></a
+        >
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="brand" href="index.html"
+        ><img src="assets/luxa-logo.png" alt="LUXA FIT" /></a
+      ><span>CONSTRUIS TA MEILLEURE VERSION.</span><span>© LUXA FIT</span>
+    </footer>
+    <script src="js/performance.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/sbd-program.js"></script>
+    <script src="js/mobile-carousels.js"></script>
+  </body>
+</html>
